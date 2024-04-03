@@ -1,8 +1,10 @@
 <?php
-class Home{
+class Home extends Controller{
     public function index()
     {
-        echo "Nama saya Syadella, Pekerjaan saya Mahasiswa";
-
+       $data['judul'] = 'Halaman Utama';
+       $this->view('templates/header', $data);
+       $this->view('home/index');
+       $this->view('templates/footer');
     }
 }
